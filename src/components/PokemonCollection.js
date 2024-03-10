@@ -3,14 +3,18 @@ import PokemonCard from "./PokemonCard";
 import { Card } from "semantic-ui-react";
 import { PokemonContext } from "./App";
 
-function PokemonCollection() {
+function PokemonCollection({ search }) {
   const { pokemonPassel } = useContext(PokemonContext);
 
+  const pokemonSearch = pokemonPassel.filter(pokemon => {
+    return pokemon.name.includes(search) 
+  })
 
+  console.log(pokemonSearch);
 
   return (
     <Card.Group itemsPerRow={6}>
-      { pokemonPassel.map(pokemon => (
+      { pokemonSearch.map(pokemon => (
         <PokemonCard
           key = { pokemon.id } 
           pokemon = { pokemon }
