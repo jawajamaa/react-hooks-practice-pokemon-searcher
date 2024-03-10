@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext } from "react";
 import PokemonPage from "./PokemonPage";
 
 function App() {
@@ -10,3 +10,5 @@ function App() {
 }
 
 export default App;
+
+export const PokemonContext = createContext([]);
