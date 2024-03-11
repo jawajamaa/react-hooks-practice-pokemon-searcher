@@ -1,13 +1,9 @@
-import React, { useContext, useState } from "react";
-import { PokemonContext } from "./App";
+import React from "react";
 
 function Search({ search, setSearch }) {
-  // const { pokemonPassel, setPokemonPassel } = useContext(PokemonContext);
   
-
   function handleChange(evt) {
     setSearch(evt.target.value);
-    // setPokemonPassel([...pokemonPassel, search]);
   }
 
   return (

@@ -10,8 +10,6 @@ function PokemonCollection({ search }) {
     return pokemon.name.includes(search) 
   })
 
-  console.log(pokemonSearch);
-
   return (
     <Card.Group itemsPerRow={6}>
       { pokemonSearch.map(pokemon => (

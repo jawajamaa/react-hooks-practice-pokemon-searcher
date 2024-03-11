@@ -16,12 +16,16 @@ function PokemonPage() {
       .then(setPokemonPassel)
   }, [])
   
+  console.log(pokemonPassel);
+
   return (
     <PokemonContext.Provider value = { {pokemonPassel, setPokemonPassel} }>
       <Container>
         <h1>Pokemon Searcher</h1>
         <br />
-        <PokemonForm />
+        <PokemonForm
+          baseUrl = { baseUrl } 
+          />
         <br />
         <Search 
           search = {  search } 
