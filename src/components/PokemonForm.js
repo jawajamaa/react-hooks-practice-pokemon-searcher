@@ -53,6 +53,14 @@ function PokemonForm({ baseUrl }) {
           ...pokemonPassel, data
         ])
       })
+      setFormData({
+        name: "",
+        hp: "",
+        sprites: {
+          frontUrl: "",
+          backUrl: ""
+        }
+      });
   }
 
   return (
